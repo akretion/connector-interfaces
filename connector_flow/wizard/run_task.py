@@ -47,7 +47,7 @@ class RunTaskWizard(models.TransientModel):
         if self.datas:
             upload_name = "Upload from run task wizard: %s" \
                 % self.datas_fname
-            ir_attachment = self.env['ir.attachment'].\
+            ir_attachment = self.env['ir.attachment.metadata'].\
                 create({'name': upload_name,
                         'datas': self.datas,
                         'datas_fname': self.datas_fname})
